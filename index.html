@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>آلة حاسبة التمويل العقاري</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <h1>آلة حاسبة التمويل العقاري</h1>
+            <div class="input">
+                <label for="unitPrice">سعر وحدة السكن (جنيه):</label>
+                <input type="text" id="unitPrice" placeholder="أدخل سعر الوحدة" />
+            </div>
+            <div class="input">
+                <label for="downPaymentRate">نسبة الدفعة المقدمة:</label>
+                <select id="downPaymentRate">
+                    <option value="0.10">10%</option>
+                    <option value="0.15">15%</option>
+                    <option value="0.20">20%</option>
+                </select>
+            </div>
+            <div class="input">
+                <label for="loanTerm">مدة التمويل (سنوات):</label>
+                <select id="loanTerm">
+                    <option value="20">20</option>
+                    <option value="25">25</option>
+                    <option value="30">30</option>
+                </select>
+            </div>
+            <div class="input">
+                <label for="interestRate">معدل الفائدة (%):</label>
+                <select id="interestRate">
+                    <option value="3">3%</option>
+                    <option value="8">8%</option>
+                </select>
+            </div>
+            <button onclick="calculate()">احسب</button>
+            <div class="result">
+                <label for="downPayment">مبلغ الدفعة المقدمة (جنيه):</label>
+                <input type="text" id="downPayment" readonly />
+            </div>
+            <div class="result">
+                <label for="monthlyInstallment">القسط الشهري (جنيه):</label>
+                <input type="text" id="monthlyInstallment" readonly />
+            </div>
+            <div class="result">
+                <label for="totalAmount">المبلغ الإجمالي (جنيه):</label>
+                <input type="text" id="totalAmount" readonly />
+            </div>
+        </div>
+        <div class="footer">
+            <p>&copy; 2024 Abdelrahman Saleh. All rights reserved.</p>
+            <p>Created by: Abdelrahman Saleh AKA Conan</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
